@@ -32,17 +32,20 @@ Este repositorio cubre los pilares esenciales del lenguaje, organizados de maner
 
 ---
 
+## 📚 Créditos y Referencias
+Todo el contenido teórico y los ejercicios están basados en el excelente trabajo de Manz.dev en LenguajeJS.com. Es una de las mejores fuentes en español para aprender desarrollo web moderno.
+
+---
+
+## 📄 Licencia
+Este proyecto está bajo la Licencia MIT. Siéntete libre de usarlo para tu propio aprendizaje.
+
+---
+
 ## 📦 Instalación y Uso
 
 Si deseas replicar este proyecto localmente, sigue estos pasos:
 
 1. **Clona el repositorio:**
    ```bash
-   git clone https://github.com/tu-usuario/nombre-del-repo.git
-   
-
-📚 Créditos y Referencias
-Todo el contenido teórico y los ejercicios están basados en el excelente trabajo de Manz.dev en LenguajeJS.com. Es una de las mejores fuentes en español para aprender desarrollo web moderno.
-
-📄 Licencia
-Este proyecto está bajo la Licencia MIT. Siéntete libre de usarlo para tu propio aprendizaje.
+   git clone https://github.com/jairo51067/Fundamentos-y-Bases-de-Programaci-n
