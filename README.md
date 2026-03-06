@@ -30,11 +30,6 @@ Este repositorio cubre los pilares esenciales del lenguaje, organizados de maner
 
 ## 📸 Vista Previa
 
-> [!TIP]
-> Puedes incluir aquí una captura de pantalla de tu página web para mostrar tu trabajo visualmente.
-
-
-
 ---
 
 ## 📦 Instalación y Uso
@@ -43,4 +38,11 @@ Si deseas replicar este proyecto localmente, sigue estos pasos:
 
 1. **Clona el repositorio:**
    ```bash
-   git clone https://github.com/tu-usuario/nombre-del-repo.git](https://github.com/tu-usuario/nombre-del-repo.git)
+   git clone https://github.com/tu-usuario/nombre-del-repo.git
+   
+
+📚 Créditos y Referencias
+Todo el contenido teórico y los ejercicios están basados en el excelente trabajo de Manz.dev en LenguajeJS.com. Es una de las mejores fuentes en español para aprender desarrollo web moderno.
+
+📄 Licencia
+Este proyecto está bajo la Licencia MIT. Siéntete libre de usarlo para tu propio aprendizaje.
