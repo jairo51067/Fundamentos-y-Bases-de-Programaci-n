@@ -174,7 +174,6 @@ switch (notadesarrollada) {
 
 console.log("Estoy", notadesarrollada >= 5 ? "aprobado" : "suspendido");
 
-
 //**5** operador ternario  -- condición ? valor verdadero : valor falso; --
 // 1. Definimos la variable
 let notat = 6;
@@ -256,7 +255,7 @@ revisando la condición en cada iteración
 y sólo se detiene cuando la condición es falsa.
 */
 
-let i = 0;  // Inicialización de la variable contador
+let i = 0; // Inicialización de la variable contador
 
 // Condición: Mientras la variable contador sea menor de 5
 while (i < 5) {
@@ -287,7 +286,15 @@ do {
 } while (j < 5);
 
 let contador2 = document.getElementById("mensaje-resultado-bucles-do-while");
-contador2.innerHTML = "Valor final de j: " + j + "<br>" + "(Ejecutado al menos una vez)" + "<br>" + "(do-while)" + "<br>" + " (Bucle finalizado porque la condición j < 5 es falsa)";
+contador2.innerHTML =
+  "Valor final de j: " +
+  j +
+  "<br>" +
+  "(Ejecutado al menos una vez)" +
+  "<br>" +
+  "(do-while)" +
+  "<br>" +
+  " (Bucle finalizado porque la condición j < 5 es falsa)";
 contador2.style.color = "green";
 contador2.style.fontWeight = "bold";
 contador2.style.fontSize = "24px";
@@ -305,7 +312,8 @@ for (let k = 0; k < 5; k++) {
 }
 
 let contador3 = document.getElementById("mensaje-resultado-bucles-for");
-contador3.innerHTML = "Valor final de k: " + 5 + "<br>" + "(Bucle for ejecutado 5 veces)";
+contador3.innerHTML =
+  "Valor final de k: " + 5 + "<br>" + "(Bucle for ejecutado 5 veces)";
 contador3.style.color = "red";
 contador3.style.fontWeight = "bold";
 contador3.style.fontSize = "24px";
@@ -321,21 +329,36 @@ for (let m = 5; m > 0; m--) {
   console.log("Valor de m:", m);
 }
 
-let contador4 = document.getElementById("mensaje-resultado-bucles-for-decremental");
-contador4.innerHTML = "Valor final de m: " + 0 + "<br>" + "(Bucle for decremental ejecutado 5 veces)";
+let contador4 = document.getElementById(
+  "mensaje-resultado-bucles-for-decremental",
+);
+contador4.innerHTML =
+  "Valor final de m: " +
+  0 +
+  "<br>" +
+  "(Bucle for decremental ejecutado 5 veces)";
 contador4.style.color = "purple";
 contador4.style.fontWeight = "bold";
 contador4.style.fontSize = "24px";
 
 //Incremental de 2 en 2 o multiple
-for (s=0,r=5; s<5; s++,r--)
+for (s = 0, r = 5; s < 5; s++, r--)
   console.log("Valor de s:", s, "Valor de r:", r);
 
-let contador5 = document.getElementById("mensaje-resultado-bucles-for-multiple");
-contador5.innerHTML = "Valor final de s: " + 5 + "<br>" + "Valor final de r: " + 0 + "<br>" + "(Bucle for incremental de 2 en 2 ejecutado 5 veces)";
+let contador5 = document.getElementById(
+  "mensaje-resultado-bucles-for-multiple",
+);
+contador5.innerHTML =
+  "Valor final de s: " +
+  5 +
+  "<br>" +
+  "Valor final de r: " +
+  0 +
+  "<br>" +
+  "(Bucle for incremental de 2 en 2 ejecutado 5 veces)";
 contador5.style.color = "orange";
 contador5.style.fontWeight = "bold";
-contador5.style.fontSize = "24px";  
+contador5.style.fontSize = "24px";
 
 //**Interrumpir un bucle con break**
 /*
@@ -358,11 +381,14 @@ for (let n = 0; n < 10; n++) {
   }
   console.log("Valor de n:", n);
 
-let contador6 = document.getElementById("mensaje-resultado-bucles-for-continue");
-contador6.innerHTML = "Bucle for con continue: se ha saltado la iteración cuando n es igual a 5";
-contador6.style.color = "brown";
-contador6.style.fontWeight = "bold";
-contador6.style.fontSize = "24px";  
+  let contador6 = document.getElementById(
+    "mensaje-resultado-bucles-for-continue",
+  );
+  contador6.innerHTML =
+    "Bucle for con continue: se ha saltado la iteración cuando n es igual a 5";
+  contador6.style.color = "brown";
+  contador6.style.fontWeight = "bold";
+  contador6.style.fontSize = "24px";
 }
 
 //**Saltar una iteracion con Break**
@@ -379,10 +405,153 @@ for (let p = 0; p < 10; p++) {
 
   console.log("Valor de p:", p);
 
-let contador7 = document.getElementById("mensaje-resultado-bucles-for-break");
-contador7.innerHTML = "Bucle for con break: se ha interrumpido el bucle cuando p es igual a 5";
-contador7.style.color = "darkred";
-contador7.style.fontWeight = "bold";
-contador7.style.fontSize = "24px";  
+  let contador7 = document.getElementById("mensaje-resultado-bucles-for-break");
+  contador7.innerHTML =
+    "Bucle for con break: se ha interrumpido el bucle cuando p es igual a 5";
+  contador7.style.color = "darkred";
+  contador7.style.fontWeight = "bold";
+  contador7.style.fontSize = "24px";
 }
 
+//**1** Párametros de una función */ Solo en se muestra en consola / PrimerEjemplo
+// Veamos el siguiente ejemplo, donde utilizamos el parámetro "hasta" para indicar hasta donde debe llegar:
+// Declaración
+function tablaDelUnoPrimerEjemplo(hasta) {
+  for (let i = 0; i <= hasta; i++) {
+    console.log("1 x", i, "=", 1 * i);
+  }
+}
+
+// Ejecución
+tablaDelUnoPrimerEjemplo(10); // Tabla del 1
+tablaDelUnoPrimerEjemplo(5); // Tabla del 1
+
+//**2** Párametros de una función */ Mostrando el resultado en el HTML con Bootstrap / SegundoEjemplo
+// Veamos el siguiente ejemplo, donde utilizamos el parámetro "hasta" para indicar hasta donde debe llegar:
+// Declaramos
+function tablaDelUnoSegundoEjemplo(hasta) {
+  // Buscamos el elemento donde queremos mostrar el resultado
+  let contenedor = document.getElementById("resultado");
+
+  // Limpiamos el contenido anterior
+  contenedor.innerHTML = "";
+
+  // Creamos el bucle
+  for (let i = 0; i <= hasta; i++) {
+    // Creamos el HTML con clases de Bootstrap (list-group-item)
+    let itemHTML = `
+        <span>1 x ${i} = ${1 * i}</span>     
+        `;
+
+    // Agregamos el item al contenedor
+    contenedor.innerHTML += itemHTML;
+  }
+}
+
+// Ejecución
+tablaDelUnoSegundoEjemplo(5);
+
+//**3** Párametros de una función // Parametros Multiples / TercerEjemplo
+// Mostrando el resultado en el HTML con Bootstrap / TercerEjemplo
+// Declaramos
+function tablaDelNumero(numero, hasta) {
+  // Buscamos el elemento donde queremos mostrar el resultado
+  let contenedor = document.getElementById("resultado-multiple");
+  // Limpiamos el contenido anterior
+  contenedor.innerHTML = "";
+  // Creamos el título de la tabla
+  let tituloHTML = `
+    <h5>Tabla del ${numero}</h5>
+  `;
+  contenedor.innerHTML += tituloHTML;
+
+  // Creamos el bucle
+  for (let i = 0; i <= hasta; i++) {
+    // Creamos el HTML con clases de Bootstrap (list-group-item)
+    let itemHTML = `
+        <span>${numero} x ${i} = ${numero * i}</span>     
+        `;
+    // Agregamos el item al contenedor
+    contenedor.innerHTML += itemHTML;
+  }
+}
+
+// Ejecución
+tablaDelNumero(5, 15); // Tabla del 5 hasta el 10
+//tablaDelNumero(3, 5); // Tabla del 3 hasta el 5
+// tablaDelNumero(7, 12); // Tabla del 7 hasta el 12
+
+
+
+//**4** Párametros de una función // Parametros Multiples / CuartoEjemplo
+// Mostrando solo en la consola / CuartoEjemplo
+// Declaración
+function tablaMultiplicar(tabla, hasta) {
+  // Título en consola
+  console.log(`Tabla del ${tabla}`);
+  console.log("-------------------"); // Opcional: separador
+
+  for (let i = 0; i <= hasta; i++) {
+    console.log(`${tabla} x ${i} = ${tabla * i}`);
+  }
+  console.log("-------------------"); // Opcional: separador al final
+}
+
+// Ejecución
+tablaMultiplicar(1, 10); // Tabla del 1
+tablaMultiplicar(5, 10); // Tabla del 5
+tablaMultiplicar(7, 12); // Tabla del 7
+
+
+//**5** Párametros de una función // Parametros por Defecto / QuintoEjemplo
+// Mostrando el resultado en el HTML con Bootstrap / QuintoEjemplo
+// Declaración
+function tablaMultiplicarConDefectoHTML(tabla = 2, hasta = 10) {
+  // Buscamos el elemento donde queremos mostrar el resultado 
+  let contenedor = document.getElementById("resultado-multiple-porDefecto");
+  // Limpiamos el contenido anterior
+  contenedor.innerHTML = "";
+  // Creamos el título de la tabla
+  let tituloHTML = `
+    <h5>Tabla del ${tabla}</h5>
+  `;
+  contenedor.innerHTML += tituloHTML;
+
+  // Creamos el bucle
+  for (let i = 0; i <= hasta; i++) {
+    // Creamos el HTML con clases de Bootstrap (list-group-item)
+    let itemHTML = `
+        <span>${tabla} x ${i} = ${tabla * i}</span>     
+        `;
+    // Agregamos el item al contenedor
+    contenedor.innerHTML += itemHTML;
+  }
+}
+
+// Ejecución
+tablaMultiplicarConDefectoHTML(); // Tabla del 2 hasta el 10  /* aqui no le pasamos ningún valor y se mostraran los valores por defecto */
+tablaMultiplicarConDefectoHTML(5); // Tabla del 5 hasta el 10 /*aqui solo le pasamos el valor de tabla y se mostrara hasta 10*/
+tablaMultiplicarConDefectoHTML(7, 12); // Tabla del 7 hasta el 12 
+/* aqui le pasamos el valor de tabla y el valor de hasta,  
+por lo que se sobreescriben los valores por defecto y se muestran los resultados correspondientes a esos valores. 
+Si no le pasamos ningún valor, se utilizarán los valores por defecto (tabla = 2 y hasta = 10) y se mostrará la tabla del 2 hasta el 10.*/
+
+
+
+//**5** Párametros de una función // Parametros por Defecto / QuintoEjemplo
+// Mostrando solo en la consola / QuintoEjemplo
+// Declaración
+function tablaMultiplicarConDefecto(tabla = 2, hasta = 10) {
+  // Título en consola
+  console.log(`Tabla del ${tabla}`);
+  console.log("-------------------"); // Opcional: separador
+  for (let i = 0; i <= hasta; i++) {
+    console.log(`${tabla} x ${i} = ${tabla * i}`);
+  }
+  console.log("-------------------"); // Opcional: separador al final
+}
+
+// Ejecución
+tablaMultiplicarConDefecto(); // Tabla del 2 hasta el 10
+tablaMultiplicarConDefecto(5); // Tabla del 5 hasta el 10
+tablaMultiplicarConDefecto(7, 12); // Tabla del 7 hasta el 12
